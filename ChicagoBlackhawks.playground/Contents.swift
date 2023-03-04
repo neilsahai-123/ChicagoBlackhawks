@@ -94,17 +94,17 @@ print("\n \n \n \n")
 
 //Calculate the average age of the players
 
-let totalAge: Int = allPlayers.reduce(0) { partialResult, playerDetail in
-    return partialResult + playerDetail.age
+let totalAge: Double = allPlayers.reduce(0.0) { partialResult, playerDetail in
+    return partialResult + Double(playerDetail.age)
 }
-let averageAge = totalAge / allPlayers.count
+let averageAge = Double(totalAge / Double(allPlayers.count))
 
 print("Average age of all players is \(averageAge)")
 print("\n \n")
 
 //Calculate the average height of the players
 
-let heightSum = allPlayers.reduce(0) { partialResult, playerDetail in
+let heightSum = allPlayers.reduce(0.0) { partialResult, playerDetail in
     return partialResult + playerDetail.height
 }
 
